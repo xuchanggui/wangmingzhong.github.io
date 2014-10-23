@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Sublime-Text2 | 思考的轨迹]]></title>
-  <link href="http://shanewfx.github.com/blog/categories/sublime-text2/atom.xml" rel="self"/>
-  <link href="http://shanewfx.github.com/"/>
-  <updated>2013-08-16T09:11:33+08:00</updated>
-  <id>http://shanewfx.github.com/</id>
+  <title><![CDATA[不开心你好我叫没烦恼]]></title>
+  <link href="http://wangmingzhong.github.com/atom.xml" rel="self"/>
+  <link href="http://wangmingzhong.github.com/"/>
+
+  <updated>2014-08-16T09:11:33+08:00</updated>
+  <id>http://wangmingzhong.github.com/</id>
+
   <author>
-    <name><![CDATA[Shane]]></name>
-    <email><![CDATA[shanewfx@gmail.com]]></email>
+    <name><![CDATA[King]]></name>
+    <email><![CDATA[wangmingzhong.cncq@gmail.com]]></email>
   </author>
+
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[程序员的代码编辑器--Sublime Text 2]]></title>
-    <link href="http://shanewfx.github.com/blog/2013/01/06/sublime-text2-for-programmer/"/>
-    <updated>2013-01-06T15:43:00+08:00</updated>
-    <id>http://shanewfx.github.com/blog/2013/01/06/sublime-text2-for-programmer</id>
+    <title type="html"><![CDATA[程序员的代码编辑器]]></title>
+    <link href="http://wangmingzhong.github.com/blog/2013/01/06/sublime-text2-for-programmer/"/>
+    <updated>2014-10-06T15:43:00+08:00</updated>
+    <id>http://wangmingzhong.github.com/blog/2013/01/06/sublime-text2-for-programmer</id>
     <content type="html"><![CDATA[<h4>===目录===</h4>
 
 <ul>
@@ -34,7 +37,7 @@
 
 <h3>0.序言</h3>
 
-<p>元旦小长假前几天偶然中接触到<a href="http://www.sublimetext.com/">Sublime Text 2</a>， 初步使用下来感觉很不错，是又一款比较适合程序员使用的文本编辑器。</p>
+<p>接触到<a href="http://www.sublimetext.com/">Sublime Text 2</a>， 初步使用下来感觉很不错，是又一款比较适合程序员使用的文本编辑器。</p>
 
 <p>在Sublime Text 2之前，一直比较喜欢使用VIM和Notepad++，其中VIM主要用来查看一些源代码文件或编辑一些文本，</p>
 
@@ -81,7 +84,7 @@
 
 <p>在Ubuntu下，该文件被保证在当前用户目录下的.Config/sublime-text-2/Packages/User中。</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -98,29 +101,24 @@
 <span class='line-number'>15</span>
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>{&lt;/p>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{
+</span><span class='line'>     "cmd": ["g++", "${file}", "-o", "${file_path}/${file_base_name}"], // For GCC On Windows and Linux
+</span><span class='line'>     //"cmd": ["CL", "/Fo${file_base_name}", "/O2", "${file}"],     // For CL on Windows Only
+</span><span class='line'>     "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+</span><span class='line'>     "working_dir": "${file_path}",
+</span><span class='line'>     "selector": "source.c, source.c++",
 </span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code> "cmd": ["g++", "${file}", "-o", "${file_path}/${file_base_name}"], // For GCC On Windows and Linux
-</span><span class='line'> //"cmd": ["CL", "/Fo${file_base_name}", "/O2", "${file}"],     // For CL on Windows Only
-</span><span class='line'> "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
-</span><span class='line'> "working_dir": "${file_path}",
-</span><span class='line'> "selector": "source.c, source.c++",
-</span><span class='line'>
-</span><span class='line'> "variants":
-</span><span class='line'> [
-</span><span class='line'>      {
-</span><span class='line'>           "name": "Run",
-</span><span class='line'>           //"cmd": ["bash", "-c", "g++ '${file}' -o '${file_path}/${file_base_name}' &amp;&amp; '${file_path}/${file_base_name}'"]  // Linux Only
-</span><span class='line'>           "cmd": ["CMD", "/U", "/C", "g++ ${file} -o ${file_base_name} &amp;&amp; ${file_base_name}"]  // For GCC On Windows Only
-</span><span class='line'>           //"cmd": ["CMD", "/U", "/C", "CL /Fo${file_base_name} /O2 ${file} &amp;&amp; ${file_base_name}"]   // For CL On Windows Only
-</span><span class='line'>      }
-</span><span class='line'> ]
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span><span class='line'>     "variants":
+</span><span class='line'>     [
+</span><span class='line'>          {
+</span><span class='line'>               "name": "Run",
+</span><span class='line'>               //"cmd": ["bash", "-c", "g++ '${file}' -o '${file_path}/${file_base_name}' && '${file_path}/${file_base_name}'"]  // Linux Only
+</span><span class='line'>               "cmd": ["CMD", "/U", "/C", "g++ ${file} -o ${file_base_name} && ${file_base_name}"]  // For GCC On Windows Only
+</span><span class='line'>               //"cmd": ["CMD", "/U", "/C", "CL /Fo${file_base_name} /O2 ${file} && ${file_base_name}"]   // For CL On Windows Only
+</span><span class='line'>          }
+</span><span class='line'>     ]
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
 
 <p>我的机器上直接使用sublime Text 2默认的C++编译配置也是正常的，应该是我之前安装了Git的原因。</p>
 
@@ -132,30 +130,21 @@
 
 <p>如在Sublime Text 2中新一个Demo.cpp文件，在其中输入代码：</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#include &lt;stdio.h>
 </span><span class='line'>
-</span><span class='line'>&lt;h1>include &lt;stdio.h>&lt;/h1>
-</span><span class='line'>
-</span><span class='line'>&lt;p>int main()
-</span><span class='line'>{&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code> printf("hello world!\n");
-</span><span class='line'> return 0;
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span><span class='line'>int main()
+</span><span class='line'>{
+</span><span class='line'>     printf("hello world!\n");
+</span><span class='line'>     return 0;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
 
 <p>勾选Tools –> Build System –>C++或者C++Bulider，使用<code>Ctrl + B</code>编译代码，<code>Ctrl + Shift + B</code>执行程序。</p>
 
@@ -169,13 +158,11 @@
 
 <p>在Sublime Text 2中按Ctrl + `，调出Sublime Text 2的命令行，在其中输入如下内容后，回车即可。</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print 'Please restart Sublime Text to finish installation'&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div>
-安装成功后，重启Sublime text 2，这时，在Preferences下看到Package Control了。</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print 'Please restart Sublime Text to finish installation'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>安装成功后，重启Sublime text 2，这时，在Preferences下看到Package Control了。</p>
 
 <p>在Windows中，Package Control被安装在Sublime Text 2目录下的Data\Installed Packages中；</p>
 
@@ -240,7 +227,7 @@
 
 <p>然后使用Gist: Create Public Gist，然后输入描述文件和文件名即可。</p>
 
-<p>这里，顺便推荐一款在<strong>Chrome浏览器</strong>中使用Github Gist的插件 -- <a href="https://github.com/simplelife7/EasyGist">EasyGist</a>。</p>
+<p>这里，顺便推荐一款在<strong>Chrome浏览器</strong>中使用Github Gist的插件 &#8211; <a href="https://github.com/simplelife7/EasyGist">EasyGist</a>。</p>
 
 <p>使用下来感觉还不错，很适合在Chrome中来管理代码片段。</p>
 
@@ -252,25 +239,21 @@
 
 <p>通过<code>Ctrl + Shift + P</code>调出命令窗口，在其中输入Preferences，选择Preferences Settings - User</p>
 
-<p>将打开的文件内容修改为如下：
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p>将打开的文件内容修改为如下：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>{&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code> "ignored_packages":
-</span><span class='line'> [
-</span><span class='line'> ],
-</span><span class='line'> "vintage_start_in_command_mode": true
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{
+</span><span class='line'>     "ignored_packages":
+</span><span class='line'>     [
+</span><span class='line'>     ],
+</span><span class='line'>     "vintage_start_in_command_mode": true
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
 
 <p>这样，在Sublime Text 2中也可以使用VIM的相关命令了。</p>
 
@@ -291,7 +274,9 @@
 <p>在HK4WIN的配置文件中加入启动Sublime Text 2的快捷键，这样，以后启动Sublime Text 2就很方便了。</p>
 
 <p>（完）</p>
-]]></content>
+]]>
+
+    </content>
   </entry>
-  
+
 </feed>
