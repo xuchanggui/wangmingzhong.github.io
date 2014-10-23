@@ -1,0 +1,220 @@
+<article class="hentry" role="article">
+	<header>
+		<h1 class="entry-title">Singleton Pattern</h1>
+		<p class="meta">
+			<time datetime="2014-10-23T15:43:00+08:00" pubdate data-updated="true">
+				Oct 23<span>th</span>, 2014
+			</time>
+			| <a href="#disqus_thread">Comments</a>
+		</p>
+	</header>
+	
+	<div class="entry-content">
+		<h4>特点</h4>
+		<ul>
+			<li>单例类只能有一个实例</li>
+			<li>单例类必须自己创建自己的唯一实例</li>
+			<li>单例类必须给所有其他对象提供这一实例</li>
+		</ul>
+
+		<!--more-->
+		<h3>1.使用注意</h3>
+		<p>
+			类的构造必须是私有的（private,因此该类不能被继承），这样可以阻止其他人使用建构方法来建立实例。
+		</p>
+		
+		<h3>2.应用场景</h3>
+		<p>1.	控制资源的使用，通过线程同步来控制资源的并发访问；</p>
+		<p>2.	控制实例产生的数量，达到节约资源的目的；</p>
+		<p>作为通信媒介使用，也就是数据共享，它可以在不建立直接关联的条件下，让多个不相关的两个线程或者进程之间实现通信。</p>
+		<p>比如数据库连接池的设计一般采用单例模式，数据库连接作为一中数据库资源；</p>
+		<p>如hibernate中的sessionFactory，创建一个对象的时间和空间的代价都很大，没有必要创建多个实例；</p>
+		<p>hibernate写在Dao模式中创建session的时候必须写成单例模式，否则到后面会出现不可预知的错误 ，</p>
+		<p>因为你每做一次数据库的操作，都必须创建一个session, 这时候用单例模式是最好的，每次都只是同一个实例。</p>
+		
+		<h3>3.实例</h3>
+		<p>一个Singleton实作即为Java中的java.lang.Runtime类别，每个Java程式执行时都有一个唯一的Runtime实例，</p>
+		<p>可以透过它提供的静态方法getRuntime()方法来取得这个实例，</p>
+		<p>例如：</p>
+		<p>Runtime runtime = Runtime.getRuntime();</p>
+		<p>取得Runtime实例之后，您可以透过它进行一些外部命令的执行、进行垃圾处理等等指令，您可以开启Runtime.java类别，</p>
+		<p>开头的几行是这样写的：</p>
+
+		<figure class='code'>
+			<div class="highlight">
+				<table>
+					<tr>
+						<td class="gutter">
+							<pre class="line-numbers">
+								<span class='line-number'>1</span>
+								<span class='line-number'>2</span>
+								<span class='line-number'>3</span>
+								<span class='line-number'>4</span>
+								<span class='line-number'>5</span>
+								<span class='line-number'>6</span>
+								<span class='line-number'>7</span>
+								<span class='line-number'>8</span>
+							</pre>
+						</td>
+						<td class='code'>
+							<pre>
+								<code class=''>
+									<span class='line'>public class Runtime { 
+									</span><span class='line'>     private static Runtime currentRuntime = new Runtime(); 
+									</span><span class='line'>     public static Runtime getRuntime() {
+									</span><span class='line'>			return currentRuntime;
+									</span><span class='line'>     }
+									</span><span class='line'>     private Runtime() {}
+									</span><span class='line'>
+									</span><span class='line'>     }
+									</span>
+								</code>
+							</pre>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</figure>
+
+		<p>实例一：也可以在第一次需要实例时再创建实例，也就是采用所谓的Lazy Initialization：</p>
+
+		<figure class='code'>
+			<div class="highlight">
+				<table>
+					<tr>
+						<td class="gutter">
+							<pre class="line-numbers">
+								<span class='line-number'>1</span>
+								<span class='line-number'>2</span>
+								<span class='line-number'>3</span>
+								<span class='line-number'>4</span>
+								<span class='line-number'>5</span>
+								<span class='line-number'>6</span>
+								<span class='line-number'>7</span>
+								<span class='line-number'>8</span>
+								<span class='line-number'>9</span>
+								<span class='line-number'>10</span>
+							</pre>
+						</td>
+						<td class='code'>
+							<pre>
+								<code class=''>
+									<span class='line'>public class Singleton { 
+									</span><span class='line'>		private static Singleton instance = null; 
+									</span><span class='line'>		private Singleton() {}
+									</span><span class='line'>		public static Singleton getInstance() { 
+									</span><span class='line'>			if (instance == null) {
+									</span><span class='line'>				instance = new Singleton();
+									</span><span class='line'>			}
+									</span><span class='line'>			return instance;
+									</span><span class='line'>		}
+									</span><span class='line'>}</span>
+								</code>
+							</pre>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</figure>
+
+
+		<p>
+
+		<p>实例二：通过线程同步来控制资源的并发访问，控制资源的使用；</p>
+
+		<figure class='code'>
+			<div class="highlight">
+				<table>
+					<tr>
+						<td class="gutter">
+							<pre class="line-numbers">
+								<span class='line-number'>1</span>
+								<span class='line-number'>2</span>
+								<span class='line-number'>3</span>
+								<span class='line-number'>4</span>
+								<span class='line-number'>5</span>
+								<span class='line-number'>6</span>
+								<span class='line-number'>7</span>
+								<span class='line-number'>8</span>
+								<span class='line-number'>9</span>
+								<span class='line-number'>10</span>
+							</pre>
+						</td>
+						<td class='code'>
+							<pre>
+								<code class=''>
+									<span class='line'>public class Singleton { 
+									</span><span class='line'>		private static Singleton instance = null; 
+									</span><span class='line'>		private Singleton() {}
+									</span><span class='line'>		public static Singleton getInstance() { 
+									</span><span class='line'>			if (instance == null) {
+									</span><span class='line'>				instance = new Singleton();
+									</span><span class='line'>			}
+									</span><span class='line'>			return instance;
+									</span><span class='line'>		}
+									</span><span class='line'>}</span>
+								</code>
+							</pre>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</figure>
+
+		<p>实例三：使用内部类维护单例的实现</p>
+
+		<figure class='code'>
+			<div class="highlight">
+				<table>
+					<tr>
+						<td class="gutter">
+							<pre class="line-numbers">
+								<span class='line-number'>1</span>
+								<span class='line-number'>2</span>
+								<span class='line-number'>3</span>
+								<span class='line-number'>4</span>
+								<span class='line-number'>5</span>
+								<span class='line-number'>6</span>
+								<span class='line-number'>7</span>
+								<span class='line-number'>8</span>
+								<span class='line-number'>9</span>
+								<span class='line-number'>10</span>
+							</pre>
+						</td>
+						<td class='code'>
+							<pre>
+								<code class=''>
+									<span class='line'>public class Singleton { 
+									</span><span class='line'>		private static Singleton instance = null; 
+									</span><span class='line'>		private Singleton() {}
+									</span><span class='line'>		public static Singleton getInstance() { 
+									</span><span class='line'>			if (instance == null) {
+									</span><span class='line'>				instance = new Singleton();
+									</span><span class='line'>			}
+									</span><span class='line'>			return instance;
+									</span><span class='line'>		}
+									</span><span class='line'>}</span>
+								</code>
+							</pre>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</figure>
+
+	</div>
+
+	<footer>
+
+	</footer>
+</article>
+
+<section>
+	<h1>Comments</h1>
+	<div id="disqus_thread" aria-live="polite">
+		<noscript>
+			Please enable JavaScript to view the 
+			<a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+		</noscript>
+	</div>
+</section>
