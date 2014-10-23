@@ -652,7 +652,7 @@ body.sidebar-footer .toggle-sidebar {
 
 @media only screen and (min-width: 992px) {
 	body>header {
-		font-size: 1.3em
+		font-size: 1.0em
 	}
 	#content {
 		margin-right: 300px
@@ -2275,7 +2275,7 @@ html body>header h1 {
 }
 
 html body>header h2 {
-	margin-top: .5em;
+	margin-top: 1.0em;
 	display: none
 }
 
