@@ -111,6 +111,12 @@ body>div>div {
 	border-right: 1px solid #e0e0e0
 }
 
+#tag-cloud {position:relative; background: #272727; height:300px; }
+
+#tag-cloud a {position:absolute; top:0px; left:0px; font-family: Microsoft YaHei; color:#fff; font-weight:bold; text-decoration:none; padding: 3px 6px; }
+
+#tag-cloud a:hover {border: 1px solid #eee; background: #ccc; }
+
 .heading,body>header h1,h1,h2,h3,h4,h5,h6 {
 	font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif
 }
@@ -2320,4 +2326,6 @@ body>div>div {
 		-khtml-border-bottom-right-radius: 0.4em;
 		border-bottom-right-radius: 0.4em
 	}
+
+
 }
