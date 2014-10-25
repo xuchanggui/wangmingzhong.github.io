@@ -62,7 +62,13 @@ defs = '<defs><linearGradient gradientTransform="matrix(0 -2038 1116.5 0 -157 26
 
   function init() {
     document.addEventListener('mousemove', mousemove);
+    document.addEventListener('click', mouseclick);
     setInterval(loop, 1000/fps);
+  }
+
+  function mouseclick(e) {
+    // window.location.href = "";
+    alert("网站正努力建设中，敬请期待");
   }
 
   function mousemove(e) {
