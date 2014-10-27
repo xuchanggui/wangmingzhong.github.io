@@ -7,9 +7,9 @@ rdiscount:
 
 title: Ipaler.com
 author:
-  name: seeye
+  name: Ipaler.com
   email: wangmingzhong.cncq@gmail.com
-  github: seeye
+  github: ipaler
   twitter: wangmingzhong
 
-production_url: http://ipaler.com
+production_url: http://ipaler.com/
