@@ -1,24 +1,28 @@
+---
+layout: nil
+title: Atom Feed
+---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[不开心你好我叫没烦恼]]></title>
-  <link href="http://wangmingzhong.github.com/atom.xml" rel="self"/>
-  <link href="http://wangmingzhong.github.com/"/>
+ <title>{{ site.title }}</title>
+ <link href="http://kyle.xlau.org/atom.xml" rel="self"/>
+ <link href="http://kyle.xlau.org/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>{{ site.production_url }}</id>
+ <author>
+   <name>kyle x lau</name>
+   <email>kyle@xlau.org</email>
+ </author>
 
-  <updated>2014-10-23T09:11:33+08:00</updated>
-  <id>http://wangmingzhong.github.com/</id>
-
-  <author>
-    <name><![CDATA[King]]></name>
-    <email><![CDATA[wangmingzhong.cncq@gmail.com]]></email>
-  </author>
-
-  <generator uri="http://octopress.org/">Octopress</generator>
-
-  
-  <entry>
-
-
-  </entry>
+ {% for post in site.posts %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http://kyle.xlau.org{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://kyle.xlau.org{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
 
 </feed>

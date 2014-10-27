@@ -1,0 +1,15 @@
+markdown: rdiscount
+pygments: true
+permalink: /posts/:title.html
+auto: true
+rdiscount:
+  extensions: [smart]
+
+title: Ipaler.com
+author:
+  name: seeye
+  email: wangmingzhong.cncq@gmail.com
+  github: seeye
+  twitter: wangmingzhong
+
+production_url: http://ipaler.com

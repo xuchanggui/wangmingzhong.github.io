@@ -1,60 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>不开心你好我叫没烦恼</title>
-<meta name="author" content="Ryan">
-<meta name="description" content="不开心你好我叫没烦恼,思绪虽来去匆匆,却能为我在此停留">
-
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="/favicon.png" rel="icon">
-<link rel="canonical" href="https://wangmingzhong.github.com">
-  
-<script>
-	window._bd_share_config = {
-		"common" : {
-		  "bdSnsKey" : {},
-		  "bdText" : "思绪虽来去匆匆，却能为我在此停留  -  不开心你好我叫没烦恼",
-		  "bdMini" : "2",
-		  "bdMiniList" : false,
-		  "bdPic" : "http://wangmingzhong.github.com/images/blogImgs/about.jpg",
-		  "bdStyle" : "0",
-		  "bdSize" : "16"
-		},
-		"slide" : {
-		  "type" : "slide",
-		  "bdImg" : "2",
-		  "bdPos" : "left",
-		  "bdTop" : "132"
-		},
-		"image" : {
-		  "viewList" : [ "qzone", "tsina", "tqq", "renren", "weixin" ],
-		  "viewText" : "分享到：",
-		  "viewSize" : "16"
-		},
-		"selectShare" : {
-		  "bdContainerClass" : null,
-		  "bdSelectMiniList" : [ "qzone", "tsina", "tqq", "renren", "weixin" ]
-		}
-	};
-	with (document)
-	0[(getElementsByTagName('head')[0] || body)
-		.appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='
-		+ ~(-new Date() / 36e5)];
-</script>
-<style type="text/css">
-	html, body { height: 100%; width: 100%; margin: 0;}
-	#whale {height: 99.5%; width: 100%;}
-</style>
-</head>
-<body>
-<div id="whale"></div>
-<script src="javascripts/index.js"></script>
-</body>
-</html>
+---
+layout: default
+title: Ipaler.com
+---
+<h2> New posts </h2>
+<ul class="posts">
+  {% for post in site.posts limit:20 %}
+  <li><span class="post_date">{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>

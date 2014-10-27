@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /assets
+Allow: /posts
+Sitemap: http://ipaler.com/sitemap.txt
+Sitemap: http://ipaler.com/atom.xml
