@@ -1,21 +1,21 @@
 # Site navigation links
 
-- title: 入门
+- title: 鍏ラ棬
   url: /getting-started/
   excerpt: "Everything you need to know to get started with My Blog and Jekyll."
   image: 400x250.gif
 
-- title: 文章示例
+- title: 鏂囩珷绀轰緥
   url: /articles/
   excerpt: "Examples of long form posts."
   image: 400x250.gif
 
-- title: 媒体
+- title: 濯掍綋
   url: /media/
   excerpt: "Examples of media posts perfect for showcasing work, photographs, etc."
   image: 400x250.gif
 
-- title: 关于
+- title: 鍏充簬
   url: /about/
   excerpt: "All about My Blog for Jekyll."
   image: 400x250.gif
