@@ -1,9 +1,9 @@
 {
-  "name": "skinny-bones-jekyll",
+  "name": "jekyll",
   "version": "0.0.1",
   "description": "A Jekyll starter site",
-  "author": "Michael Rose <michael@mademistakes.com>",
-  "homepage": "http://mademistakes.com/",
+  "author": "Ipaler <wangmingzhong.cnq@gmail.com>",
+  "homepage": "http://ipaler.com/",
   "license": "The MIT License (MIT)",
   "devDependencies": {
     "grunt": "~0.4.2",
