@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "我的博客"
+title: "Getting Started with Skinny Bones"
 date: 2014-06-25T13:57:25-04:00
 modified:
 excerpt:
@@ -132,7 +132,7 @@ Used to generate absolute URLs in `sitemap.xml`, `atom.xml`, and for generating 
 Examples:
 
 {% highlight yaml %}
-url: http://ipaler.github.io/skinny-bones-jekyll
+url: http://mmistakes.github.io/skinny-bones-jekyll
 url: http://localhost:4000
 url: //cooldude.github.io
 url: 
@@ -151,7 +151,7 @@ To set what links appear in the top navigation edit `_data/navigation.yml`. Use 
   image: 300x200.gif
 
 - title: Made Mistakes
-  url: http://ipaler.com  
+  url: http://mademistakes.com  
 {% endhighlight %}
 
 To set what links appear in the footer edit `_data/footer.yml`. Use the following format for each link:
@@ -161,7 +161,7 @@ To set what links appear in the footer edit `_data/footer.yml`. Use the followin
   url: /subscribe/
 
 - title: External Page
-  url: http://ipaler.com  
+  url: http://mademistakes.com  
 {% endhighlight %}
 
 ---
@@ -222,7 +222,7 @@ To add attribution to a feature image use the following YAML front matter on pos
 image:
   feature: feature-image-filename.jpg
   credit: Michael Rose #name of the person or site you want to credit
-  creditlink: http://ipaler.com #url to their site or licensing
+  creditlink: http://mademistakes.com #url to their site or licensing
 {% endhighlight %}
 
 ##### Teasers Images
