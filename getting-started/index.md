@@ -19,14 +19,14 @@ Skinny Bones requires [Jekyll](http://jekyllrb.com/) 2+. Make sure to run `gem u
 
 If you are creating a new Jekyll site using Skinny Bones following these steps:
 
-1. [Download Skinny Bones](https://github.com/ipaler/archive/master.zip) and unzip.
+1. [Download Skinny Bones](https://github.com/ipaler/) and unzip.
 2. Rename `skinny-bones-jekyll-master` to something meaningful ie: `new-site`
 3. Run `bundle install` to install all dependencies (Jekyll, [Jekyll-Sitemap](https://github.com/jekyll/jekyll-sitemap), [Octopress](https://github.com/octopress/octopress), [Bourbon](http://bourbon.io), etc)
 4. Update `config.yml`, add navigation, and add posts/pages. Full details below.
 
 If you want to use Skinny Bones with an existing Jekyll site follow these steps:
 
-1. [Download Skinny Bones](https://github.com/ipaler/archive/master.zip) and unzip.
+1. [Download Skinny Bones](https://github.com/ipaler/) and unzip.
 2. Rename `skinny-bones-jekyll-master` to something meaningful ie: `new-site`
 3. Run `bundle install` to install all dependencies (Jekyll, [Jekyll-Sitemap](https://github.com/jekyll/jekyll-sitemap), [Octopress](https://github.com/octopress/octopress), [Bourbon](http://bourbon.io), etc)
 4. Add all of your existing posts, pages, and any other content you want to move over.
@@ -132,7 +132,7 @@ Used to generate absolute URLs in `sitemap.xml`, `atom.xml`, and for generating 
 Examples:
 
 {% highlight yaml %}
-url: http://ipaler.github.io/skinny-bones-jekyll
+url: http://ipaler.github.io/
 url: http://localhost:4000
 url: //cooldude.github.io
 url: 
