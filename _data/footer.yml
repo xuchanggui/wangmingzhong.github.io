@@ -1,13 +1,13 @@
 # Footer navigation links
 
-- title: Home2
+- title: 我的主页
   url: /
 
-- title: Getting Started
+- title: 网站地图
   url: /getting-started/
 
-- title: About
+- title: 个人简介
   url: /about/
 
-- title: Terms
+- title: 条款的是
   url: /terms/
