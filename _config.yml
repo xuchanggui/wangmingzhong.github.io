@@ -1,7 +1,7 @@
 # Site wide configuration
 
-title: IPALER.COM
-description: "ipaler.com"
+title: Ipaler.com
+description: "Ipaler.com, A lightweight site starter for Jekyll"
 logo: 120x120.gif
 teaser: 400x250.gif
 locale: en_US
