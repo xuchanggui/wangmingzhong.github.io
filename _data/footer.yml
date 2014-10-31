@@ -3,11 +3,20 @@
 - title: 我的主页
   url: /
 
-- title: 网站地图
+- title: 个人简介
   url: /getting-started/
 
-- title: 个人简介
+- title: 网站地图
   url: /about/
 
-- title: 条款的是
+- title: 友情链接
+  url: /terms/
+  
+- title: 马克飞象
+  url: http://maxiang.info/
+  
+- title: 关于俺的
+  url: https://www.ipaler.com/
+  
+- title: 哎呀条款什么的
   url: /terms/
